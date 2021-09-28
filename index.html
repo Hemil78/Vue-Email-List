@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Vue Mail List</title>
+    </head>
+    <body>
+
+        <div id="root" class="box-container">
+            <div class="container">
+                <ul v-if="emails.length >= 10"> <!-- far apparire le mail solo quando sono generate tutte -->
+                    <li v-for="(email, index) in emails" 
+                        :key="index">{{email}}</li> <!-- ciclo per stampare tutti gli elm all'interno dell'array emails -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- script axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- script vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
